@@ -1,4 +1,4 @@
-import java.util.SimpleTimeZone;
+package TiendaMascotas;
 
 public class Mascota {
     //
@@ -38,5 +38,6 @@ public class Mascota {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
+
 
 }
