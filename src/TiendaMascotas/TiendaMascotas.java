@@ -49,31 +49,25 @@ public class TiendaMascotas {
 
         for (int i = 0; i < cantidadMascotas; i++) {
             System.out.println(inventario[i].getNombre());
-            break;
         }
 
         for (int i = 0; i < cantidadMascotas; i++) {
             if (inventario[i].getNombre() == vendeMascota) {
                 inventario[i] = null;
-                for (int j = i; j < cantidadMascotas; j++)
+                System.out.println("Se eliminó a " + inventario[i].getNombre() + " del inventario");
+                for (int j = i; j < cantidadMascotas; j++) {
                     inventario[j] = inventario[j + 1];
-
-                {
-                    cantidadMascotas--;
-                    return;
-
                 }
-
             }
-            System.out.println("Se eliminó a " + inventario[i].getNombre() + " del inventario");
-
+            cantidadMascotas--;
+            return;
         }
-
     }
+
 
     public void mostarInventario() {
         for (int j = 0; j < cantidadMascotas; j++) {
-            System.out.println("Quedan" + cantidadMascotas + "mascotas");
+            System.out.println("Quedan " + cantidadMascotas + " mascotas");
             System.out.println("Nombre: " + inventario[j].getNombre());
             System.out.println("Edad: " + inventario[j].getEdad());
             System.out.println("Tipo " + inventario[j].getTipo());
@@ -81,12 +75,9 @@ public class TiendaMascotas {
             if (cantidadMascotas == 0) {
                 System.out.println("No quedan mascotas");
             }
-
         }
     }
-
-
-    public static void main(String[] args) {
+    public static void main (String[]args){
         TiendaMascotas tiendaMascotas = new TiendaMascotas();
         int salir = 2;
         while (salir > 1) {
@@ -109,7 +100,6 @@ public class TiendaMascotas {
             salir = scBucle.nextInt();
         }
     }
-
 }
 
 
